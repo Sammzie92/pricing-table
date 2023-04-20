@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 .container{
     width: 100%;
@@ -75,11 +76,71 @@
     color: white;
     font-size: 15px;
     border: 2px solid #88241e;
-    border-radius: 6px;
+    border-radius: 50px;
     margin-top: 30px;
     cursor: pointer;
     transition: background 0.5s;
 }
 .price-column button:hover{
     background: #e33058;
+}
+
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+
+  .price-row {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+  .price-column {
+    padding: 10% 10%;
+  }
+
+  .price-column h3 {
+    font-size: 30px;
+  }
+
+  .price-column p {
+    font-size: 18px;
+  }
+
+  .price-column ul li {
+    margin: 10px 0;
+  }
+
+}
+
+/* Media queries for medium screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .price-row {
+    grid-template-columns: 1fr;
+
+  }
+    .price-column{
+        width: 15%;
+    }
+
+}
+
+/* Media queries for larger screens */
+@media screen and (min-width: 1025px) {
+
+  .price-column {
+    padding: 10% 15%;
+  }
+
+  .price-column h3 {
+    font-size: 40px;
+  }
+
+  .price-column p {
+    font-size: 22px;
+  }
+
+  .price-column ul li {
+    margin: 15px 0;
+  }
+
 }
